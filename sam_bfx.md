@@ -22,7 +22,7 @@ Your compute group should be named something like this `compute-$lab` where $lab
 
     ` /gatk/gatk --list`
     
-3. Now lets do some Genotyping! Using the data from last week, lets call SNV with GATK HaplotypeCaller.
+3. Now lets do some Genotyping! Lets call SNVs with GATK HaplotypeCaller for our example cram alignment file.
     
     Run the command below:
     
