@@ -23,4 +23,11 @@ Your compute group should be named something like this `compute-$lab` where $lab
     ` /gatk/gatk --list`
     
 3. Now lets do some Genotyping! Using the data from last week, lets call SNV with GATK HaplotypeCaller.
+    
+    Run the command below:
+    
+        /gatk/gatk --java-options "-Xmx4g" HaplotypeCaller -R /gscmnt/gc2560/core/model_data/ref_build_aligner_index_data/2887491634/build21f22873ebe0486c8e6f69c15435aa96/aligner-index-blad8-1-1.gsc.wustl.edu-tmooney-331-75fff591a14f4f7c910247fc39c4ea7f/bwamem/0_7_15/all_sequences.fa -I ~/chr13.cram -O chr13_test.g.vcf.gz -L chr13
+    
+    Here the required inputs for HaplotypeCaller are a reference fasta file `-R`, an input alignment file (bam/cram/sam) `-I`, and and output file name `-O` to specify the name of the output vcf file. We also supply two additionally paramters. `--java-options` and `-L`. The java-options specifies the amount of "heap" memory we are suppling to run the command. This is a little advanced, but we are supplying the program with enough memory to run. GATK documents have good defaults for these on their tools page. See [here](https://gatk.broadinstitute.org/hc/en-us/categories/360002369672). The `-L` options specifies the genomic intervals we want haplotype caller to make calls for. Here we give it chr13 as our alignment file was downsized to only include alignments for chr13.
 
+    
