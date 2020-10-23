@@ -11,7 +11,7 @@ Your compute group should be named something like this `compute-$lab` where $lab
 
     `export GROUP=YOUR_GROUP`
     
-    > To access a variables value in linux, we use the dollar sign `$`. If we set `GROUP=compute-group2`, $GROUP will equal compute-group2. You can double check this by running the command `echo $GROUP`.
+    > To access a variable's value in linux, we use the dollar sign `$`. If we set `GROUP=compute-group2`, $GROUP will equal compute-group2. You can double check this by running the command `echo $GROUP`.
     
 2. Run the command below to start an interactive session with the GATK4 docker image. The GATK4 version is 4.1.9.0
     ```
